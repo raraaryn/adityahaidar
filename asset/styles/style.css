@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Scroll tombol halus */
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;   
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover {
+    background-color: #eab951;
+    color: white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.landing {
+    height: 100%;
+    width: 100%;
+    min-height: 100hv;
+    background: linear-gradient(245.59deg, #92b884 0%, #618758 28.53%, #1f5449 75.52%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.plant img {
+    width: 700px;  
+    height: auto;    
+}
+
+section {
+  padding: 0 19%;
+}
+
+.landing-text h5 {
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.landing-text h4 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.landing-text h1{
+    font-size: 150px;
+    line-height: 1;
+    color: white;
+}
+
+.landing-text a {
+    display: inline-block;
+    color: white;
+    background: #eab951;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+    margin-bottom: 30px;
+}
+
+.landing-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.landing-text a.buy {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.landing-text a.buy i{
+    vertical-align: middle;
+    margin-right: 5px ;
+}
+
+aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+}
+
+aside .side {
+    height: 100%;
+    display: flex;
+}
+
+aside .side img {
+    width: 40px;
+}
+
+aside .side ul {
+    padding: 1.5rem 1rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: auto;
+    background-color: #eab951;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+aside .side li {
+    list-style-type: none;
+  }
+  
+aside .side li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+aside .side li a:hover img {
+    transform: scale(1.2); 
+}
+
+article {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+article img{
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+
+p {
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.about {
+    background: white;
+}
+
+body {
+    background: #1f5449;
+}
+
+h5{
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+footer {
+    background: linear-gradient(245.59deg, #92b884 0%, #618758 28.53%, #1f5449 75.52%);
+}
+
+
+/* MEDIA QUERY SESUAI LEBAR*/
+@media (max-width: 1535px) {
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1460px) {
+    section {
+        padding: 0 12%;
+        transition: .2s;
+    }
+} 
+
+@media (max-width: 1340px) {
+    .plant img {
+        width: 100%;
+        height: auto;
+    }
+    .landing-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .landing-text h5{
+        margin-bottom: 25px;
+    }
+    article img{
+        width: 400px;
+    }
+}  
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .landing-text{
+        padding-top: 115px;
+    }
+    .plant{
+        text-align: center;
+    }
+    .plant img {
+        width: 560px;
+        height: auto;
+    }
+    .landing{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        display: none;
+    }
+    article img{
+        width: 300px;
+    }
+} 
+
+@media (max-width: 990px) {
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #1f5449;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 5px 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+} 
+
+@media (max-width: 680px) {
+    .plant img {
+        width: 100%;
+        height: auto;
+    }
+}
